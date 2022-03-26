@@ -15,6 +15,9 @@ const Shops = () => {
     if (cart.find((val) => val.id === product.id)) return;
     setCart((preState) => [...preState, product]);
   };
+  const handlerResetCart = () => {
+    setCart([]);
+  };
 
   //Fetching Data
   useEffect(() => {
@@ -35,7 +38,7 @@ const Shops = () => {
         ))}
       </div>
       <div className="cart_container">
-        <Cart cart={cart} />
+        <Cart cart={cart} handlerResetCart={handlerResetCart} />
       </div>
     </section>
   );

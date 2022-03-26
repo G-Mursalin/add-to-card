@@ -1,0 +1,12 @@
+.cart_heading {
+  color: #1c2b35;
+}
+.cart button {
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  border: 3px solid black;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
