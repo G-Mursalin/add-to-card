@@ -23,8 +23,9 @@ const Shops = () => {
           <Product key={product.id} product={product} />
         ))}
       </div>
-
-      <Cart />
+      <div className="cart_container">
+        <Cart />
+      </div>
     </section>
   );
 };

@@ -1,7 +1,8 @@
 import React from "react";
 // CSS
 import "./Product.css";
-
+// Icon
+import { FaCartPlus } from "react-icons/fa";
 const Product = (props) => {
   const { name, img, price } = props.product;
   return (
@@ -13,7 +14,9 @@ const Product = (props) => {
       <div className="product-info">
         <p>Price: ${price}</p>
       </div>
-      <button className="btn-card">Add To Card</button>
+      <button className="btn-card">
+        Add To Card <FaCartPlus size="1.2rem" className="btn_icon" />
+      </button>
     </div>
   );
 };
