@@ -4,6 +4,7 @@ import "./Shops.css";
 // Components
 import Product from "../Product/Product";
 import Cart from "../Cart/Cart";
+import QuestionAnswer from "./QuestionAnswer";
 
 const Shops = () => {
   //Declaring States
@@ -27,20 +28,23 @@ const Shops = () => {
   }, []);
 
   return (
-    <section className="shop_container">
-      <div className="products_container">
-        {products.map((product) => (
-          <Product
-            key={product.id}
-            product={product}
-            handleAddCarts={handleAddCarts}
-          />
-        ))}
-      </div>
-      <div className="cart_container">
-        <Cart cart={cart} handlerResetCart={handlerResetCart} />
-      </div>
-    </section>
+    <div>
+      <section className="shop_container">
+        <div className="products_container">
+          {products.map((product) => (
+            <Product
+              key={product.id}
+              product={product}
+              handleAddCarts={handleAddCarts}
+            />
+          ))}
+        </div>
+        <div className="cart_container">
+          <Cart cart={cart} handlerResetCart={handlerResetCart} />
+        </div>
+      </section>
+      <QuestionAnswer />
+    </div>
   );
 };
 

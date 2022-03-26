@@ -19,7 +19,7 @@ const Cart = ({ cart, handlerResetCart }) => {
         <h4 key={val.id}>{val.name}</h4>
       ))}
       <button onClick={handleChoseForMe}>CHOSE 1 FOR ME </button>
-      <button onClick={handlerResetCart}>CHOSE AGAIN</button>
+      <button onClick={handlerResetCart}>CLEAR CART</button>
     </div>
   );
 };
