@@ -8,6 +8,13 @@ import Cart from "../Cart/Cart";
 const Shops = () => {
   //Declaring States
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
+
+  //Handlers
+  const handleAddCarts = (product) => {
+    if (cart.find((val) => val.id === product.id)) return;
+    setCart((preState) => [...preState, product]);
+  };
 
   //Fetching Data
   useEffect(() => {
@@ -20,11 +27,15 @@ const Shops = () => {
     <section className="shop_container">
       <div className="products_container">
         {products.map((product) => (
-          <Product key={product.id} product={product} />
+          <Product
+            key={product.id}
+            product={product}
+            handleAddCarts={handleAddCarts}
+          />
         ))}
       </div>
       <div className="cart_container">
-        <Cart />
+        <Cart cart={cart} />
       </div>
     </section>
   );
