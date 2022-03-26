@@ -17,3 +17,39 @@
   width: 300px;
   height: 508px;
 }
+/* Media Query */
+@media only screen and (max-width: 576px) {
+  .shop_container {
+    grid-template-columns: 1fr;
+  }
+  .products_container {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+  }
+  section {
+    padding: 10px 20px;
+  }
+  nav {
+    padding: 10px 20px;
+  }
+
+  .cart_container {
+    position: absolute;
+    top: 55px;
+    left: 23%;
+    width: 300px;
+    height: 508px;
+  }
+  .products_container {
+    margin-top: 520px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .cart_container {
+    position: absolute;
+    top: 55px;
+    left: 13%;
+    width: 300px;
+    height: 508px;
+  }
+}
